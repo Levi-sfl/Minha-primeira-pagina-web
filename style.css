@@ -136,3 +136,122 @@ id {
     height: auto;
     flex-shrink: 0;
 }
+
+/* ===== Ajustes gerais (valem para todas as telas) ===== */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: #4da3ff;
+}
+
+/* Links longos das referências quebram a linha em vez de vazar da tela */
+li,
+p {
+    overflow-wrap: anywhere;
+}
+
+/* O texto "Avalie:" estava branco sobre fundo branco */
+.feedback p {
+    color: black;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.feedback textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ===== Celulares e tablets pequenos ===== */
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0 16px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-top: 32px;
+    }
+
+    p {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    /* Texto e imagem ficam um embaixo do outro */
+    .capela,
+    .Literatura,
+    .Fado,
+    .Arte,
+    .Teatro {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .capela p,
+    .Literatura p,
+    .Fado p,
+    .Arte p,
+    .Teatro p {
+        text-align: left;
+    }
+
+    .capela img,
+    .Literatura img,
+    .Fado img,
+    .Arte img,
+    .Teatro img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 8px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .feedback {
+        margin: 24px 0;
+        padding: 16px;
+    }
+
+    /* Opções e botões maiores, mais fáceis de tocar */
+    .feedback input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        margin: 8px 8px 8px 0;
+    }
+
+    .feedback textarea {
+        font-size: 16px;
+    }
+
+    .feedback button {
+        font-size: 16px;
+        padding: 12px 20px;
+        margin: 4px 8px 4px 0;
+    }
+}
